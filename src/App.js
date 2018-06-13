@@ -8,7 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colors: []
+      colors: [],
+      quote: "",
+      author:""
     }
   }
   componentDidMount = () => {
@@ -16,15 +18,30 @@ class App extends Component {
   }
 
   getQuote = () => {
-    const url = "http://quotes.stormconsultancy.co.uk/random.json"
+    const url = "http://quotes.stormconsultancy.co.uk/random.json";
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        this.setState({
+          quote: data.quote,
+          author: data.author
+        })
+      })
   }
 
   render() {
     return (
       <div className="App">
         <div className="quote-box">
-          <Quote />
-          <Buttons />
+          <Quote
+            quote={this.state.quote}
+            author={this.state.author}
+          />
+          <Buttons
+          randomQuote={this.getQuote}
+          />
         </div>
       </div>
     );
