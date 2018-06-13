@@ -2,9 +2,9 @@ import React from "react";
 
 const Buttons = (props) => {
   return (
-    <div>
-      <button className="tweet-quote"></button>
-      <button className="random-quote"></button>
+    <div className="buttons-container">
+      <button className="tweet-quote buttons"><i class="fab fa-twitter"></i></button>
+      <button className="random-quote buttons">New Quote</button>
     </div>
   )
 }
