@@ -3,16 +3,15 @@ import Quote from "./components/Quote";
 import Buttons from "./components/Buttons";
 import './index.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colors: [],
       quote: "",
       author: ""
     }
   }
+
   componentDidMount = () => {
     this.getQuote();
   }
@@ -40,6 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className="title">Random Quote Generator</h1>
         <div className="quote-box">
           <Quote
             quote={this.state.quote}
