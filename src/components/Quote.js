@@ -2,8 +2,8 @@ import React from "react";
 
 const Quote = (props) => {
   return (
-    <div className="quote-box">
-      <blockquote className="quote-text">{props.quote}</blockquote>
+    <div>
+      <p className="quote-text">"{props.quote}"</p>
       <p className="quote-author">-{props.author}</p>
     </div>
   );

@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       colors: [],
       quote: "",
-      author:""
+      author: ""
     }
   }
   componentDidMount = () => {
@@ -23,12 +23,18 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         this.setState({
           quote: data.quote,
           author: data.author
         })
       })
+  }
+
+  tweetQuote = () => {
+    const currentQuote = document.querySelector(".quote-text");
+    const currentAuthor = document.querySelector(".quote-author");
+
+    window.open(`https://twitter.com/intent/tweet?text=${currentQuote.textContent} ${currentAuthor.textContent}`);
   }
 
   render() {
@@ -40,7 +46,8 @@ class App extends Component {
             author={this.state.author}
           />
           <Buttons
-          randomQuote={this.getQuote}
+            tweet={this.tweetQuote}
+            randomQuote={this.getQuote}
           />
         </div>
       </div>
