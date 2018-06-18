@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Quote from "./components/Quote";
 import Buttons from "./components/Buttons";
-import './index.css';
 
 class App extends Component {
   constructor(props) {
