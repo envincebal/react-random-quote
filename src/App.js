@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   getQuote = () => {
-    const url = "https://quotes.stormconsultancy.co.uk/random.json";
+    const url = "https://talaikis.com/api/quotes/random/";
 
     fetch(url)
       .then(response => response.json())
