@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="title">Random Quote Generator</h1>
+        <p className="title">Random Quote Generator</p>
         <div className="quote-box">
           <Quote
             quote={this.state.quote}

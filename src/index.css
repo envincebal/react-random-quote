@@ -8,6 +8,7 @@ body {
   background: -webkit-linear-gradient(to right, #200122, #6f0000);
   background: linear-gradient(to right, #200122, #6f0000);
   box-sizing: border-box;
+  letter-spacing: 2px;
 }
 
 .App {
@@ -18,13 +19,15 @@ body {
 
 .title {
   text-align: center;
+  font-size: 42px;
+  font-weight: 700;
 }
 
 .quote-box {
   max-width: 600px;
   margin: 50px auto 0 auto;
   height: auto;
-  padding: 35px;
+  padding: 25px;
   border-radius: 5px;
   border: 1px solid #fff;
 }
@@ -33,7 +36,8 @@ body {
   padding: 0 0 0 15px;
   font-style: italic;
   border-left: 3px solid #bdbdbd;
-  font-size: 21px;
+  font-size: 18px;
+  margin-top: 0;
 }
 
 .quote-author {
