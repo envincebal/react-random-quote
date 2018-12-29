@@ -16,11 +16,12 @@ class App extends Component {
   }
 
   getQuote = () => {
-    const url = "https://talaikis.com/api/quotes/random/";
+    const url = "http://quotes.stormconsultancy.co.uk/random.json";
 
     fetch(url)
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         this.setState({
           quote: data.quote,
           author: data.author
