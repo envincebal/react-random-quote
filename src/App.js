@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   getQuote = () => {
-    const url = "https://quotes.stormconsultancy.co.uk/random.json";
+    const url = "https://cors-anywhere.herokuapp.com/http://quotes.stormconsultancy.co.uk/random.json";
 
     fetch(url)
       .then(response => response.json())
